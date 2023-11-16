@@ -38,8 +38,8 @@ block
  * text to preview element
  */
   window.onload = function() {
-    document.getElementById('preview').innerHTML =
-      marked.parse(text);
+    
+    document.getElementById('preview').innerHTML = marked.parse(text); // eslint-disable-line
   }
   /**
   * @function handleChange On change in text area sends parsed markdown
@@ -49,7 +49,7 @@ block
   */
   function handleChange(event) {
     setContent(event.target.value);
-    document.getElementById("preview").innerHTML = marked.parse(event.target.value);
+    document.getElementById("preview").innerHTML = marked.parse(event.target.value); // eslint-disable-line
   };
   
   return (
